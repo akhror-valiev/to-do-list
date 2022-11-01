@@ -1,4 +1,6 @@
 *.lock.json
+# .gitignore
+node_modules/
 # Logs
 logs
 *.log
@@ -103,5 +105,3 @@ typings/
 # TernJS port file
 .tern-port
 
-# Ignore node modules directory
-node_modules/
