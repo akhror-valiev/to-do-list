@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: lightgray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+
+  /* max-width: 60%;
+    margin: 200px auto; */
+  width: 600px;
+  gap: 2px;
+}
+
+main .project-heading {
+  display: flex;
+  border: none;
+  padding: 20px;
+  background-color: white;
+  justify-content: space-between;
+}
+
+.new-task {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+ul li {
+  gap: 10px;
+}
+
+ul .input-label {
+  display: flex;
+  border: none;
+  padding: 20px;
+  gap: 10px;
+  background-color: white;
+  position: relative;
+}
+
+.input-label i {
+  position: absolute;
+  right: 20px;
+}
+
+.input-li {
+  display: flex;
+  border: none;
+  padding: 20px;
+  gap: 10px;
+  background-color: white;
+  position: relative;
+}
+
+.input-field {
+  display: flex;
+  position: relative;
+}
+
+.input-field i {
+  display: flex;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+div .input-text {
+  width: 100%;
+  padding: 20px;
+  border: none;
+  outline: none;
+}
+
+div button {
+  width: 100%;
+  padding: 20px;
+  border: none;
+}
