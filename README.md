@@ -1,19 +1,19 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Awesome Books Project in ES6
+# To Do List Project
 
-> This an awesome books project based on ES6
+> In this project, I will build a simple HTML list of To Do tasks. The list will be styled according to the specifications.This simple web page will be built using webpack and served by a webpack dev server.
 
 ## Built With
 
 - HTML
 - CSS
 - JavaScript
-- Luxon.js
+- Webpack
 
 ## Live Demo (if available)
 
-[Live Demo Link](https://akhror-valiev.github.io/awesome-books-in-ES6/)
+[Live Demo Link](https://akhror-valiev.github.io/to-do-list/)
 
 ## Getting Started
 
