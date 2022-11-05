@@ -1,41 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<!-- Coding By CodingNepal - youtube.com/codingnepal -->
+<html lang="en" dir="ltr">
 
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
+    <title>Todo List App in JavaScript | CodingNepal</title>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wbpack Exercise</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <!-- Iconscout Link For Icons -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
 </head>
 
 <body>
-    <main>
-        <div class="project-heading">
-            <p>Today's To DO</p>
-            <i class="fa-solid fa-rotate"></i>
+    <div class="wrapper">
+        <div class="heading-text">
+            <p>Today's To Do</p>
+            <i class="uil uil-sync"></i>
         </div>
-        <div class="input-field">
-            <input class="input-text" type="text" placeholder="to do list" />
-            <span><i class="fa-solid fa-turn-down-left"></i></span>
+        <div class="task-input">
+            <input type="text" placeholder="Add a new task" />
+            <i class="uil uil-enter"></i>
         </div>
+        <div class="controls">
+            <div class="filters">
+                <span class="active" id="all">All</span>
+                <span id="pending">Pending</span>
+                <span id="completed">Completed</span>
+            </div>
+        </div>
+        <ul class="task-box"></ul>
         <div>
-            <ul class="new-task">
-                <!-- <li class="input-li">
-                    <label class="input-label" for="">
-							<input type="checkbox" />
-							<p>DO some</p>
-
-							<span class="menu-icon"
-								><i class="fa-solid fa-ellipsis-vertical"></i
-							></span>
-						</label>
-                </li> -->
-            </ul>
+            <button class="clear-btn">Clear all completed</button>
         </div>
-        <div>
-            <button class="btn-add">Clear all complted</button>
-        </div>
-    </main>
+    </div>
 </body>
 
 </html>
