@@ -1,38 +1,32 @@
 <!DOCTYPE html>
-<!-- Coding By CodingNepal - youtube.com/codingnepal -->
-<html lang="en" dir="ltr">
+<html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <title>Todo List App in JavaScript | CodingNepal</title>
-
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Iconscout Link For Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+    <title>To Do List</title>
 </head>
 
 <body>
-    <div class="wrapper">
-        <div class="heading-text">
-            <p>Today's To Do</p>
-            <i class="uil uil-sync"></i>
-        </div>
-        <div class="task-input">
-            <input type="text" placeholder="Add a new task" />
-            <i class="uil uil-enter"></i>
-        </div>
-        <div class="controls">
-            <div class="filters">
-                <span class="active" id="all">All</span>
-                <span id="pending">Pending</span>
-                <span id="completed">Completed</span>
+    <main>
+        <div class="main-section">
+            <div class="title-section">
+                <span>Today's To Do</span>
+                <i class="uil uil-sync"></i>
+            </div>
+            <form id="form" action="./">
+                <input class="input-text" id="input-form" type="text" placeholder="Add to Your List..." />
+                <!-- <button type="submit">fgffg</button> -->
+            </form>
+            <ul class="list-task" id="list-id"></ul>
+            <div class="clear-btn">
+                <button id="clear-btn" type="button">Clear all completed</button>
             </div>
         </div>
-        <ul class="task-box"></ul>
-        <div>
-            <button class="clear-btn">Clear all completed</button>
-        </div>
-    </div>
+    </main>
 </body>
 
 </html>
