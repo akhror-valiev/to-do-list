@@ -1,8 +1,4 @@
-/* eslint-disable linebreak-style */
 import listItem from './listOfItems.js';
-// import getPositionOfElement from './getElementPostion.js';
-// eslint-disable-next-line import/no-cycle
-import dragging from './draggingDrop.js';
 
 export default class TaskList {
   constructor() {
@@ -129,7 +125,6 @@ export default class TaskList {
       delBtn.forEach((del) => {
         del.addEventListener('click', this.removeBtn.bind(this));
       });
-      dragging();
     }
   }
 
