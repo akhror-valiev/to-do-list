@@ -3,17 +3,18 @@
   margin: 0;
   font-family: "Open Sans", sans-serif;
   box-sizing: border-box;
+  position: relative;
 }
 
 body {
   display: flex;
   justify-content: center;
+  margin: 100px auto;
   height: 100vh;
-  width: 100%;
 }
 
 body main {
-  width: 50%;
+  width: 600px;
 }
 
 .title-section {
@@ -24,7 +25,7 @@ body main {
 
 .title-section i {
   position: absolute;
-  right: 30px;
+  right: 10px;
   font-size: 20px;
   color: gray;
 }
@@ -35,14 +36,13 @@ body main {
 }
 
 .main-section {
-  width: 60vw;
   border: 1px solid rgba(0, 0, 0, 0.03);
   box-shadow: 20px 20px 50px 5px rgba(0, 0, 0, 0.05);
-  padding-top: 20px;
+  padding-top: 10px;
 }
 
 .padding {
-  padding: 20px;
+  padding: 10px 0 10px 10px;
   border-bottom: 1px solid rgb(224, 224, 224);
 }
 
@@ -50,8 +50,9 @@ body main {
   border: none;
   font-style: italic;
   outline: none;
-  padding: 20px;
+  padding: 0 0 0 10px;
   font-size: 16px;
+  width: 100%;
 }
 
 .list-task {
@@ -68,11 +69,17 @@ body main {
 }
 
 .dot-menu {
-  background-color: rgba(255, 255, 0, 0.5);
+  background-color: rgba(235, 235, 135, 0.5);
+}
+
+.list-item {
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
 
 .clear-btn button {
-  padding: 20px;
+  padding: 15px;
   border: none;
   width: 100%;
   background-color: rgb(245, 245, 245);
@@ -87,21 +94,24 @@ body main {
 
 .labels {
   border: none;
-  resize: none;
   height: 18px;
-  width: 42vw;
   outline: none;
   background: none;
+  padding: 0 100% 0 0;
 }
 
 .delete-btn {
   display: none;
   cursor: pointer;
+  position: relative;
+  padding: 0 5px 0 0;
 }
 
 .done-btn {
   display: none;
   cursor: pointer;
+  position: absolute;
+  right: 30px;
 }
 
 .draggables {
