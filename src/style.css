@@ -1,90 +1,113 @@
 * {
-  margin: 0;
   padding: 0;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
   box-sizing: border-box;
 }
 
 body {
-  background: lightgray;
   display: flex;
-  align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  height: 100vh;
+  width: 100%;
 }
 
-main {
-  display: flex;
-  flex-direction: column;
-
-  /* max-width: 60%;
-    margin: 200px auto; */
-  width: 600px;
-  gap: 2px;
+body main {
+  width: 50%;
 }
 
-main .project-heading {
+.title-section {
   display: flex;
-  border: none;
+  position: relative;
+  align-items: center;
+}
+
+.title-section i {
+  position: absolute;
+  right: 30px;
+  font-size: 20px;
+  color: gray;
+}
+
+.title-section span {
   padding: 20px;
-  background-color: white;
+  font-size: 18px;
+}
+
+.main-section {
+  width: 60vw;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  box-shadow: 20px 20px 50px 5px rgba(0, 0, 0, 0.05);
+  padding-top: 20px;
+}
+
+.padding {
+  padding: 20px;
+  border-bottom: 1px solid rgb(224, 224, 224);
+}
+
+.input-text {
+  border: none;
+  font-style: italic;
+  outline: none;
+  padding: 20px;
+  font-size: 16px;
+}
+
+.list-task {
+  list-style: none;
+}
+
+.list-task li {
+  display: flex;
   justify-content: space-between;
 }
 
-.new-task {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
+.vertical-dots {
+  cursor: pointer;
 }
 
-ul li {
-  gap: 10px;
+.dot-menu {
+  background-color: rgba(255, 255, 0, 0.5);
 }
 
-ul .input-label {
-  display: flex;
-  border: none;
+.clear-btn button {
   padding: 20px;
-  gap: 10px;
-  background-color: white;
-  position: relative;
-}
-
-.input-label i {
-  position: absolute;
-  right: 20px;
-}
-
-.input-li {
-  display: flex;
   border: none;
-  padding: 20px;
-  gap: 10px;
-  background-color: white;
-  position: relative;
-}
-
-.input-field {
-  display: flex;
-  position: relative;
-}
-
-.input-field i {
-  display: flex;
-  position: absolute;
-  right: 20px;
-  top: 20px;
-}
-
-div .input-text {
   width: 100%;
-  padding: 20px;
+  background-color: rgb(245, 245, 245);
+  cursor: pointer;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+}
+
+.checked {
+  text-decoration: line-through;
+}
+
+.labels {
   border: none;
+  resize: none;
+  height: 18px;
+  width: 42vw;
   outline: none;
+  background: none;
 }
 
-div button {
-  width: 100%;
-  padding: 20px;
-  border: none;
+.delete-btn {
+  display: none;
+  cursor: pointer;
+}
+
+.done-btn {
+  display: none;
+  cursor: pointer;
+}
+
+.draggables {
+  cursor: move;
+}
+
+.draggables.dragging {
+  opacity: 0.5;
 }

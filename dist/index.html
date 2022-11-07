@@ -3,37 +3,28 @@
 
 <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wbpack Exercise</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+    <title>To Do List</title>
 <script defer src="main.js"></script></head>
 
 <body>
     <main>
-        <div class="project-heading">
-            <p>Today's To DO</p>
-            <i class="fa-solid fa-rotate"></i>
-        </div>
-        <div class="input-field">
-            <input class="input-text" type="text" placeholder="to do list" />
-            <span><i class="fa-solid fa-turn-down-left"></i></span>
-        </div>
-        <div>
-            <ul class="new-task">
-                <!-- <li class="input-li">
-                    <label class="input-label" for="">
-							<input type="checkbox" />
-							<p>DO some</p>
-
-							<span class="menu-icon"
-								><i class="fa-solid fa-ellipsis-vertical"></i
-							></span>
-						</label>
-                </li> -->
-            </ul>
-        </div>
-        <div>
-            <button class="btn-add">Clear all complted</button>
+        <div class="main-section">
+            <div class="title-section">
+                <span>Today's To Do</span>
+                <i class="uil uil-sync"></i>
+            </div>
+            <form id="form" action="./">
+                <input class="input-text" id="input-form" type="text" placeholder="Add to Your List..." />
+                <!-- <button type="submit">fgffg</button> -->
+            </form>
+            <ul class="list-task" id="list-id"></ul>
+            <div class="clear-btn">
+                <button id="clear-btn" type="button">Clear all completed</button>
+            </div>
         </div>
     </main>
 </body>
