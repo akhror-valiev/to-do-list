@@ -38,11 +38,11 @@ This is an example of how to list things you need to use the software and how to
    ```sh
    npm install
    ```
-   2. Build the app
+2. Build the app
    ```sh
    npm run build
    ```
-   3. Run the app
+3. Run the app
    ```sh
    npm start
    ```
