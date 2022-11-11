@@ -13,7 +13,7 @@
 
 ## Live Demo (if available)
 
-[Live Demo Link](https://akhror-valiev.github.io/to-do-list/)
+[Live Demo Link]()
 
 ## Getting Started
 
