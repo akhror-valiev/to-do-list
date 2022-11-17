@@ -1,5 +1,5 @@
 import './style.css';
-import TaskList from './modules/task.js';
+import Task from './modules/task.js';
 
-const list = new TaskList();
+const list = new Task();
 list.display();

@@ -1,6 +1,6 @@
 import listItem from './listOfItems.js';
 
-export default class TaskList {
+export default class Task {
   constructor() {
     this.listObj = JSON.parse(localStorage.getItem('Tasks')) || [];
   }
@@ -145,7 +145,7 @@ export default class TaskList {
   }
 }
 
-export const task = new TaskList();
+export const task = new Task();
 const addTask = document.getElementById('input-form');
 const form = document.getElementById('form');
 
