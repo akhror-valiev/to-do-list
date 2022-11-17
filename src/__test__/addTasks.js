@@ -2,7 +2,7 @@ import 'jest-localstorage-mock';
 
 const inputTask = global.document.querySelector('.input-tasks');
 
-const tasks = [];
+const listObj = [];
 
 class Task {
   constructor(description, completed = false, index) {
@@ -14,11 +14,11 @@ class Task {
 
 const addNewTask = () => {
   const newTask = new Task(inputTask.value);
-  if (tasks.length === 0) newTask.index = 1;
-  if (tasks.length > 0) newTask.index = tasks.length + 1;
-  tasks.push(newTask);
+  if (listObj.length === 0) newTask.index = 1;
+  if (listObj.length > 0) newTask.index = listObj.length + 1;
+  listObj.push(newTask);
   localStorage.setItem('task', JSON.stringify(inputTask.value));
   inputTask.value = '';
 };
 
-export { addNewTask, tasks, inputTask };
+export { addNewTask, listObj, inputTask };
