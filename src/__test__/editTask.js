@@ -1,30 +1,29 @@
-import _ from 'lodash';
 import 'jest-localstorage-mock';
+import _ from 'lodash';
 
-const listObj = [
+export const listObj = [
   {
     description: 'go to swimming',
     completed: true,
     index: 1,
   },
   {
-    description: 'do homework',
+    description: 'paly football',
     completed: false,
     index: 2,
   },
   {
-    description: 'play football',
+    description: 'go to hiking',
     completed: true,
     index: 3,
   },
-
 ];
 
-const container = document.querySelector('.list');
+const container = global.document.querySelector('.list');
 
 const populateList = (values) => {
-  const sortedlistObj = _.sortBy(values, 'index');
-  _.forEach(sortedlistObj, (toDo) => {
+  const storeValue = _.sortBy(values, 'index');
+  _.forEach(storeValue, (toDo) => {
     const htmlText = `
     <li class='item'>
       <input type='checkbox' class='checkbox' id='${toDo.description[0]}${toDo.index
@@ -41,14 +40,15 @@ const populateList = (values) => {
   });
 };
 
-const removeTask = (i) => {
-  listObj.splice(i, 1);
-  _.forEach(listObj, (task, i) => {
-    task.index = i + 1;
-  });
+populateList(listObj);
+
+export const textDesc = [
+  ...global.document.querySelectorAll('.item-description'),
+];
+
+export const listOfItems = () => {
+  listObj[1].description = textDesc[1].textContent;
   localStorage.setItem('task', JSON.stringify(listObj));
   container.innerHTML = '';
   populateList(listObj);
 };
-
-export { removeTask, listObj };
