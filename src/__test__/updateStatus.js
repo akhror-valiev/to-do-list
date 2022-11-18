@@ -1,30 +1,29 @@
 import _ from 'lodash';
 import 'jest-localstorage-mock';
 
-const listObj = [
+export const listObj = [
   {
-    description: 'go to swimming',
+    description: 'go to swimm',
     completed: true,
     index: 1,
   },
   {
-    description: 'do homework',
-    completed: false,
+    description: 'play football',
+    completed: true,
     index: 2,
   },
   {
-    description: 'play football',
+    description: 'go to hiking',
     completed: true,
     index: 3,
   },
-
 ];
 
-const container = document.querySelector('.list');
+export const container = global.document.querySelector('.list');
 
 const populateList = (values) => {
-  const sortedlistObj = _.sortBy(values, 'index');
-  _.forEach(sortedlistObj, (toDo) => {
+  const storeValue = _.sortBy(values, 'index');
+  _.forEach(storeValue, (toDo) => {
     const htmlText = `
     <li class='item'>
       <input type='checkbox' class='checkbox' id='${toDo.description[0]}${toDo.index
@@ -41,14 +40,21 @@ const populateList = (values) => {
   });
 };
 
-const removeTask = (i) => {
-  listObj.splice(i, 1);
-  _.forEach(listObj, (task, i) => {
-    task.index = i + 1;
-  });
+populateList(listObj);
+const check = [...global.document.querySelectorAll('.checkbox')];
+
+export const removeTask = () => {
+  listObj[1].completed = check[1].checked;
   localStorage.setItem('task', JSON.stringify(listObj));
-  container.innerHTML = '';
+  const itemDesc = Array.from(global.document.querySelectorAll('.item-description'));
+  // eslint-disable-next-line
+    if ((listObj[1].completed = check[1].checked)) {
+    itemDesc[1].classList.add('label-text');
+  } else {
+    itemDesc[1].classList.remove('label-text');
+    itemDesc[1].contentEditable = 'true';
+  }
   populateList(listObj);
 };
 
-export { removeTask, listObj };
+export const checkBox = [...document.querySelectorAll('.checkbox')];
